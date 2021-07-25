@@ -23,4 +23,4 @@ This bot generates a dynamic spin wheel gif with the options specified as argume
 
 ## Limitations
 
-The Discord API does not allow to modify the files embedded in a message, so it is necessary to delete and send another message. This produces) a strange effect, but it works 😄
+The Discord API does not allow to modify the files embedded in a message, so it is necessary to delete and send another message. This produces a strange effect, but it works 😄
