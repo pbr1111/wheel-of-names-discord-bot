@@ -21,15 +21,15 @@ const generateSpinWheel = (
   const canvas = createCanvas(canvasWidth, canvasHeight);
   const ctx = canvas.getContext('2d');
 
-  const wheel = createCanvasWheel(canvas, ctx, options, angle, duration);
+  const wheel = createCanvasWheel(canvas, ctx as any, options, angle, duration);
 
   for (let i = 0; i < duration; i++) {
     wheel.rotate(i);
-    encoder.addFrame(ctx);
+    encoder.addFrame(ctx as any);
   }
 
   for (let i = 0; i < lastFrameDurationMs; i++) {
-    encoder.addFrame(ctx);
+    encoder.addFrame(ctx as any);
   }
 
   encoder.finish();

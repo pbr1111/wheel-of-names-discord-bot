@@ -1,17 +1,17 @@
 {
-    "compilerOptions": {
-      "strict": true,
-      "module": "commonjs",
-      "esModuleInterop": true,
-      "target": "esnext",
-      "moduleResolution": "node",
-      "sourceMap": true,
-      "outDir": "dist",
-      "skipLibCheck": true,      
-      "forceConsistentCasingInFileNames": true,
-      "incremental": true,
-      "resolveJsonModule": true
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "dist"]
-  }
+  "compilerOptions": {
+    "strict": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "esnext",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "lib": ["DOM", "ESNext"]
+  },
+  "include": ["src"]
+}

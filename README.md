@@ -10,9 +10,8 @@ This bot generates a dynamic spin wheel gif with the options specified as argume
 
 ## How to use
 
-1. Install the packages with _yarn install_ or _npm install_.
-2. Get your Discord bot token and configure it in your server.
-   The application needs to be authenticated with **bot** scope and **Send Messages** bot permissions.
+1. Install the packages with _npm install_.
+2. Get your Discord bot token and configure it in your server. Configure the bot with `MESSAGE CONTENT INTENT` and `Send Message` permission.
 3. To start the bot use: `TOKEN=yourtoken yarn start` or `TOKEN=yourtoken yarn dev` if you need hot reload.
 
 ## Available commands
