@@ -1,4 +1,4 @@
-import { Canvas, NodeCanvasRenderingContext2D } from 'canvas';
+import { Canvas, type CanvasRenderingContext2D } from 'canvas';
 import {
   getRandomColors,
   getTextColorFromBackground
@@ -13,7 +13,7 @@ const styles = {
     strokeWidth: 2
   },
   options: {
-    font: '14px arial black',
+    font: '14px Sans',
     textBaseline: 'middle',
     portionStrokeColor: '#000',
     portionStrokeWidth: 1
@@ -33,7 +33,7 @@ const styles = {
 
 const createCanvasWheel = (
   canvas: Canvas,
-  ctx: NodeCanvasRenderingContext2D,
+  ctx: CanvasRenderingContext2D,
   options: string[],
   endAngleDegrees: number,
   totalSteps: number
@@ -60,7 +60,8 @@ const createCanvasWheel = (
     ctx.fill();
     ctx.stroke();
 
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    // Remove any after this commit https://github.com/Automattic/node-canvas/commit/2c4d2a7dc61252913825cf9204730381051f0eba is released
+    (ctx.setTransform as any)(1, 0, 0, 1, 0, 0);
   };
 
   const drawOption = (
